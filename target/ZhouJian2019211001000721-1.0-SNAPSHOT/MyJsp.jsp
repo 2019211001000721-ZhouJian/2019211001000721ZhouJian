@@ -12,7 +12,7 @@
 </head>
 <body>
 <a href="index.jsp">go to ecjtu</a>
-<form method="post">
+<form method="post" >
     Name : <input type="text" name="name"><br/>
     ID   : <input type="text" name="id"><br/>
     <input type="submit" value="send data to servlet"/>
