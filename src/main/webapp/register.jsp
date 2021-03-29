@@ -17,7 +17,7 @@
         email    :<input type="text" name="email" required><br/>
         Gender   :<input  type="radio" name="gender" value="Male">Male
                   <input  type="radio" name="gender" value="Female">Female<br/>
-        birthdate:<input type="text name=" name="birthdate" required><br/>
+        birthdate:<input type="text" name="birthdate" required><br/>
         <input type="submit" value="Register" required>
     </form>
 </body>
