@@ -41,10 +41,10 @@ public class RegisterServlet extends HttpServlet {
         String password=request.getParameter("password");
         String Email=request.getParameter("email");
         String Gender=request.getParameter("gender");
-        String Date=request.getParameter("birthdate");
+        String Date=request.getParameter("birthDate");
 
         String sql1="insert into usertable values(?,?,?,?,?)";
-        PreparedStatement pstmt;
+        PreparedStatement pstmt= null;
         try {
             pstmt = con.prepareStatement(sql1);
             pstmt.setString(1,Username);
@@ -95,18 +95,7 @@ public class RegisterServlet extends HttpServlet {
     }
 }
 
-/*
-public class RegisterServlet extends HttpServlet {
-    String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    String url="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=userdb";
-    String username="sa";
-    String password="admin123456789";
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-        String sql="select * from usertable";
-    }
-
-    @Override
+    /*@Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
@@ -121,5 +110,4 @@ public class RegisterServlet extends HttpServlet {
         writer.println("<br>birthdate :"+birthdate);
         writer.close();
     }
-    }
-*/
+    }*/
