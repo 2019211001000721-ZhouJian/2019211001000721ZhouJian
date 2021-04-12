@@ -25,6 +25,6 @@
         <option value="bing">Bing</option>
         <option value="google">Google</option>
     </select>
-    <input type="submit" value="Search">
+    <input type="submit" value="Search"/>
 </form>
 <%@include file="footer.jsp"%>

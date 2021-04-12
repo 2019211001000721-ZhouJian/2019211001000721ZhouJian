@@ -65,6 +65,7 @@ public class RegisterServlet extends HttpServlet {
         ResultSet rs= null;
             rs = con.createStatement().executeQuery(sql2);
 //            while(rs.next()){
+
 //                int id=rs.getInt("id");
 //                String username=rs.getString("username");
 //                String password1=rs.getString("password");
