@@ -37,7 +37,7 @@ public class UserDao implements IUserDao{
 
     @Override
     public int updateUser(Connection con, User user) throws SQLException {
-        String sql = "update usertable set username=?,password=?,email=?,gender=?,birthDate=? where id = ?";
+        String sql = "update usertable set username=?,password=?,email=?,gender=?,birthdate=? where id = ?";
         PreparedStatement st=con.prepareStatement(sql);
         st.setString(1,user.getUsername());
         st.setString(2,user.getPassword());
@@ -63,7 +63,7 @@ public class UserDao implements IUserDao{
             user.setPassword(rs.getString("password"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
-            user.setBirthdate(rs.getString("birthDate"));
+            user.setBirthdate(rs.getString("birthdate"));
         }
         return user;
     }
@@ -103,7 +103,7 @@ public class UserDao implements IUserDao{
             user.setPassword(rs.getString("password"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
-            user.setBirthdate(rs.getString("birthDate"));
+            user.setBirthdate(rs.getString("birthdate"));
             list.add(user);
         }
         return list;
@@ -123,7 +123,7 @@ public class UserDao implements IUserDao{
             user.setPassword(rs.getString("password"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
-            user.setBirthdate(rs.getString("birthDate"));
+            user.setBirthdate(rs.getString("birthdate"));
             list.add(user);
         }
         return list;
@@ -143,7 +143,7 @@ public class UserDao implements IUserDao{
             user.setPassword(rs.getString("password"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
-            user.setBirthdate(rs.getString("birthDate"));
+            user.setBirthdate(rs.getString("birthdate"));
             list.add(user);
         }
         return list;
@@ -163,7 +163,7 @@ public class UserDao implements IUserDao{
             user.setPassword(rs.getString("password"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
-            user.setBirthdate(rs.getString("birthDate"));
+            user.setBirthdate(rs.getString("birthdate"));
             list.add(user);
         }
         return list;
@@ -171,7 +171,7 @@ public class UserDao implements IUserDao{
 
     @Override
     public List<User> findByBirthdate(Connection con, String birthdate) throws SQLException {
-        String sql = "select * from usertable where birthDate=?";
+        String sql = "select * from usertable where birthdate=?";
         PreparedStatement st = con.prepareStatement(sql);
         st.setString(1,birthdate);
         ResultSet rs = st.executeQuery();
@@ -183,7 +183,7 @@ public class UserDao implements IUserDao{
             user.setPassword(rs.getString("password"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
-            user.setBirthdate(rs.getString("birthDate"));
+            user.setBirthdate(rs.getString("birthdate"));
             list.add(user);
         }
         return list;
@@ -201,7 +201,7 @@ public class UserDao implements IUserDao{
             user.setPassword(rs.getString("password"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
-            user.setBirthdate(rs.getString("birthDate"));
+            user.setBirthdate(rs.getString("birthdate"));
             list.add(user);
         }
         return list;

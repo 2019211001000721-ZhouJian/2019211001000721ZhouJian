@@ -1,5 +1,7 @@
 package com.week3.demo;
 
+import com.week5.demo.LoginServlet;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +35,7 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+        request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
     }
 
     @Override
@@ -61,9 +63,9 @@ public class RegisterServlet extends HttpServlet {
 //        out.println("<body>");
 //        out.println("<table>");
 //        out.println("<tr><td>ID</td><td>username</td><td>password</td><td>Email</td><td>Gender</td><td>Birthdate</td></tr>");
-        String sql2="select * from usertable";
-        ResultSet rs= null;
-            rs = con.createStatement().executeQuery(sql2);
+        //String sql2="select * from usertable";
+        //ResultSet rs= null;
+            //rs = con.createStatement().executeQuery(sql2);
 //            while(rs.next()){
 
 //                int id=rs.getInt("id");
@@ -77,7 +79,8 @@ public class RegisterServlet extends HttpServlet {
 //            request.getRequestDispatcher("userList.jsp").forward(request,response);
 //            System.out.println("i am in RedirectServlet-->doPoat()-->after forward()");
 
-            response.sendRedirect("Login.jsp");
+           // response.sendRedirect("Login.jsp");
+        response.sendRedirect("login");
         } catch (SQLException throwables) {
           throwables.printStackTrace();
         }
